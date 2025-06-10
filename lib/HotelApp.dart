@@ -31,7 +31,7 @@ class HotelScreen extends StatelessWidget {
           ),
           HotelCard(
             Nome: 'Pousada Mar Azul',
-            preco: '1.540',
+            preco: '1.545',
             imagem: 'assets/marazul.jpg',
           ),
           HotelCard(
