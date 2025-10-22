@@ -16,7 +16,7 @@ class WeatherScreen extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           const Text(
-            'Bem-vindo ao NOMEDOAPP',
+            'Bem-vindo ao Partiu Rolê',
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,

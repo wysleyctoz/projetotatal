@@ -30,7 +30,7 @@ class _HotelAppState extends State<HotelApp> {
   String _getTitleForIndex(int index) {
     switch (index) {
       case 0:
-        return 'nome do app';
+        return 'Partiu Rolê';
       case 1:
         return 'Agendamentos';
       case 2:
@@ -60,12 +60,22 @@ class _HotelAppState extends State<HotelApp> {
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
-          centerTitle: true,
+          centerTitle: false, // DA
         ),
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text(_getTitleForIndex(_selectedIndex)),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              if (_selectedIndex == 2)
+                const Icon(Icons.bed, size: 24, color: Colors.white),
+              if (_selectedIndex == 2) const SizedBox(width: 8),
+              Text(
+                _getTitleForIndex(_selectedIndex),
+              ),
+            ],
+          ),
         ),
         body: AnimatedSwitcher(
           duration: const Duration(milliseconds: 300),
@@ -76,7 +86,6 @@ class _HotelAppState extends State<HotelApp> {
     );
   }
 
-  /// Rodapé de navegação (mantendo o design original verde)
   Widget buildBottomNavBar() {
     return BottomNavigationBar(
       backgroundColor: Colors.green[800],
